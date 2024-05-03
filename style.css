@@ -1,7 +1,10 @@
 @font-face {
     font-family: 'Gotham';
-    src: url('path/to/gotham.woff2') format('woff2'), /* Modern Browsers */
-         url('path/to/gotham.woff') format('woff'); /* Legacy Browsers */
+    src: url('/gotham/Gotham-Bold.otf') format('otf'),
+         url('/gotham/Gotham-Black.otf') format('otf');
+    
+    font-weight: normal;
+    font-style: normal;
   }
 
 *{
@@ -34,6 +37,7 @@ ul{
     text-align: center;
     font-weight: 600;
     margin-bottom: 1.6rem;
+    font-size: 1.9rem !important;
 }
 
 .header span{
@@ -75,8 +79,8 @@ ul{
 .card_layer{
     position: absolute;
     backdrop-filter: blur(20px);
-    background: rgb(225 34 74 / 53%);
-    backdrop-filter: blur(10px);
+    background: rgb(233 68 106 / 90%);
+    backdrop-filter: blur(2px);
     width: 50px;
     height: 50px;
     bottom: 0px;
@@ -84,52 +88,61 @@ ul{
     visibility: hidden;
 }
 .card_layer-content{
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
     text-align: center;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* display: none; */
+    transform: translateY(20px);
 }
 .card_layer-content .title{
-    display: none;
+    transform: translateY(20px);
+    font-weight: 700;
     font-size: 1.4rem;
     padding: 0 5px;
     color: #ffffff;
     margin: 0;
 
+
 }
 .card_layer-content .desc{
-    display: none;
-    font-weight: 500;
+    transform: translateY(20px);
+    font-weight: 400;
     color: #ffffff;
-    font-size: 0.85rem;
+    font-size: 1.2rem;
     padding: 0 5px;
     z-index: 10;
+
 }
 
 .comp-card:hover .card_layer{
- 
     visibility: visible;
     width:100%;
     height: 250px;
 }
 
 
-.comp-card:hover  .card_layer-content .title{
-    display: block;
-    transition-property: all; 
-    transition-duration: 0.5s;
-    transition-timing-function: ease;
-    transition-delay: 0.5s;
+.comp-card:hover  .card_layer-content {
+    visibility: visible;
 
 }
-.comp-card:hover  .card_layer-content .desc{
-    display: block;
+.comp-card:hover  .card_layer-content .title{
+    transform: translateY(0);
     transition-property:all; 
-    transition-duration: 0.5s;
+    transition-duration: 0.2s;
     transition-timing-function: ease;
-    transition-delay: 1s;
+    transition-delay: 0.5s;
+}
+.comp-card:hover  .card_layer-content .desc{
+    transform: translateY(0);
+    transition-property:all; 
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
+    transition-delay: 0.7s;
 }
 
 @media screen and (min-width:900px) {
