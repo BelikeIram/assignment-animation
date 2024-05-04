@@ -1,6 +1,7 @@
 @font-face {
     font-family: 'Gotham';
-    src: url('./gotham/Gotham-Bold.otf') format('otf');
+    src: url('./gotham/Gotham-Bold.otf') format('otf'),
+         url('./gotham/Gotham-Black.otf') format('otf');
     
     font-weight: normal;
     font-style: normal;
@@ -10,7 +11,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Gotham', sans-serif;
+    font-family: 'Gotham', sans-serif !important;
 }
 
 ul{
